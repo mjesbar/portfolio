@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Spacing: 4px base, multiples via p-1, m-4, gap-6 ... */
+  --spacing: 0.25rem;
+
+  /* Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+
+  /* Borders (widths, use border-(length:--border-*)) */
+  --border-thin: 1px;
+  --border-thick: 2px;
+  --border-heavy: 5px;
+
+  /* Fonts */
+  --font-heading: 'Crimson Pro', serif;
+  --font-body: 'Crimson Text', serif;
+
+  /* Font sizes */
+  --text-xs: 12px;
+  --text-xs--line-height: 1.5;
+  --text-sm: 18px;
+  --text-sm--line-height: 1.5;
+  --text-base: 24px;
+  --text-base--line-height: 1.5;
+  --text-lg: 30px;
+  --text-lg--line-height: 1.5;
+  --text-xl: 36px;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 72px;
+  --text-2xl--line-height: 1.5;
+  --text-3xl: 120px;
+  --text-3xl--line-height: 1.5;
+  --text-4xl: 168px;
+  --text-4xl--line-height: 1.5;
+
+  /* Colours: primary, secondary (accents), neutral (base) */
+  --color-primary-100: oklch(97.00% 0.0389 41.12);
+  --color-primary-200: oklch(88.90% 0.0777 41.12);
+  --color-primary-300: oklch(80.80% 0.1166 41.12);
+  --color-primary-400: oklch(72.71% 0.1555 41.12);
+  --color-primary-500: oklch(64.61% 0.1943 41.12);
+  --color-primary-600: oklch(55.75% 0.1890 35.10);
+  --color-primary-700: oklch(51.21% 0.1747 34.37);
+  --color-primary-800: oklch(46.68% 0.1604 33.65);
+  --color-primary-900: oklch(38.68% 0.1604 33.65);
+  --color-secondary-100: oklch(97.00% 0.0183 182.93);
+  --color-secondary-200: oklch(95.97% 0.0366 182.93);
+  --color-secondary-300: oklch(94.94% 0.0549 182.93);
+  --color-secondary-400: oklch(93.90% 0.0732 182.93);
+  --color-secondary-500: oklch(92.87% 0.0915 182.93);
+  --color-secondary-600: oklch(84.28% 0.0916 210.62);
+  --color-secondary-700: oklch(78.28% 0.0916 210.62);
+  --color-secondary-800: oklch(72.28% 0.0916 210.62);
+  --color-secondary-900: oklch(66.28% 0.0916 210.62);
+  --color-neutral-100: #FCFCFC;
+  --color-neutral-200: #DCDCDC;
+  --color-neutral-300: #BBBBBB;
+  --color-neutral-400: #A0A0A0;
+  --color-neutral-500: #858585;
+  --color-neutral-600: #6A6A6A;
+  --color-neutral-700: #505050;
+  --color-neutral-800: #303030;
+  --color-neutral-900: #101010;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-100);
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
