@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { NavLink, useLocation } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 import useNavVisibility from '../lib/use-nav-visibility';
 
 const LEFT_LINKS = [
@@ -30,8 +30,8 @@ function MjNavLogo() {
   };
 
   return (
-    <a
-      href={import.meta.env.VITE_SITE_URL}
+    <Link
+      to="/"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setHovered(false)}
       className={`relative z-[1] flex h-full w-[30vw] flex-row items-center justify-center transition-transform duration-250 ease-out ${hovered ? 'scale-[1.6] translate-y-1/4' : ''}`}
@@ -62,7 +62,7 @@ function MjNavLogo() {
       <span className={`flex h-full w-1/3 items-center justify-center text-sm font-bold transition-transform duration-500 ease-out ${hovered ? 'translate-y-2/5' : ''}`}>
         Dev
       </span>
-    </a>
+    </Link>
   );
 }
 
