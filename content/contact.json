@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "href": "https://www.linkedin.com/in/mdjba",
+      "icon": "/assets/linkedin.webp",
+      "alt": "LinkedIn Link"
+    },
+    { "href": "https://github.com/mjesbar", "icon": "/assets/github.webp", "alt": "GitHub Link" },
+    { "href": "https://x.com/mjesbar", "icon": "/assets/twitter.webp", "alt": "Twitter Link" },
+    {
+      "href": "https://wa.me/3046798036?text=Hello!",
+      "icon": "/assets/whatsapp.webp",
+      "alt": "WhatsApp Link"
+    }
+  ]
+}
