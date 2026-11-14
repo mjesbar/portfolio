@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router';
-import { motion } from 'framer-motion';
 import MjSection from './MjSection';
 
 interface MjSectionDualProps {
@@ -19,16 +18,6 @@ const HOVER_COLORS = [
   'var(--color-secondary-500)',
   'var(--color-neutral-300)',
 ];
-
-const IMAGE_VARIANTS = {
-  hidden: { y: 200 },
-  visible: { y: 0 },
-};
-
-const LINE_VARIANTS = {
-  hidden: (offsetX: number) => ({ opacity: 0, x: offsetX }),
-  visible: { opacity: 1, x: 0 },
-};
 
 function MjDualWord({ word }: { word: string }) {
   const [hoverColor, setHoverColor] = useState<string>();
@@ -59,20 +48,15 @@ function MjDualWord({ word }: { word: string }) {
 export default function MjSectionDual({ imgSrc, imgPos, lines }: MjSectionDualProps) {
   return (
     <MjSection className="flex flex-row items-center justify-center overflow-hidden">
-      <motion.img
+      <img
         src={imgSrc}
         alt=""
-        variants={IMAGE_VARIANTS}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`pointer-events-none absolute top-0 z-[1] h-auto w-[45%] min-w-[612px] max-w-[45%] select-none ${imgPos === 'right' ? 'right-0' : 'left-0'}`}
       />
       <div className="flex h-full w-full flex-col items-center justify-center">
-        {lines.map((line, index) => (
-          <motion.div
+        {lines.map((line) => (
+          <div
             key={line}
-            custom={(index + 1) % 2 === 0 ? -200 : 200}
-            variants={LINE_VARIANTS}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="group relative whitespace-nowrap has-[[data-eligible]:hover]:z-[2]"
           >
             {line.split(' ').map((word, wordIndex) => (
@@ -81,7 +65,7 @@ export default function MjSectionDual({ imgSrc, imgPos, lines }: MjSectionDualPr
                 <MjDualWord word={word} />
               </Fragment>
             ))}
-          </motion.div>
+          </div>
         ))}
       </div>
     </MjSection>
