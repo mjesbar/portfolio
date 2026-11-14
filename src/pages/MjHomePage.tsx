@@ -1,38 +1,18 @@
-import MjFooter from '../components/MjFooter';
 import MjSectionDual from '../components/MjSectionDual';
-import MjSectionTextAlone from '../components/MjSectionTextAlone';
 
 const DUAL_LINES = [
-  'TradingGodBlessYouFirstPeaceFreedomRationalityProudTeamwork',
-  'ManufactureBuildIdealVenture Work ProductivityLogisticsMentorship',
-  'LogicInnovationDesign Service EnginuitySoftwareDevelopment',
-  'IndependentJoyfulHumbleNeed About KindnessFriendly',
-  'IntrovertLinkedWarmful Contact NetworkUpToDate',
-  'HopeDiversityEnjoyPassionateEncourageFaithLoveHelpful',
+  'Trading God Bless You First Peace Freedom Rationality Proud Teamwork',
+  'Manufacture Build Ideal Venture Work Productivity Logistics Mentorship',
+  'Logic Innovation Design Service Enginuity Software Development',
+  'Independent Joyful Humble Need About Kindness Friendly',
+  'Introvert Linked Warmful Contact Network Up To Date',
+  'Hope Diversity Enjoy Passionate Encourage Faith Love Helpful',
 ];
 
 export default function MjHomePage() {
   return (
-    <>
-      <main className="flex w-full flex-col items-center justify-start">
-        <MjSectionTextAlone
-          mainText="Welcome"
-          subText="My Friend"
-          miniText="Enjoy this page!"
-          backgroundImage="/assets/neural.webp"
-        />
-        <MjSectionTextAlone
-          mainText="My Name is Miguel Bello"
-          subText="I'm an Industrial & Software Engineer"
-          miniText="and even more..."
-          backgroundImage="/assets/circles.webp"
-        />
-        <MjSectionDual imgPos="left" imgSrc="/assets/profile-photo-1440p.webp" lines={DUAL_LINES} />
-      </main>
-      <MjFooter
-        message="Let's Create Great Things Together! 🚀"
-        miniText="I've built this site with pure javascript Web Components, React makes me 😴 Dude"
-      />
-    </>
+    <main className="flex w-full flex-col items-center justify-start">
+      <MjSectionDual imgPos="left" imgSrc="/assets/profile-photo-1440p.webp" lines={DUAL_LINES} />
+    </main>
   );
 }

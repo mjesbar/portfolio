@@ -16,14 +16,14 @@ interface MjSectionContactProps {
 
 export default function MjSectionContact({ subtitle, description, links }: MjSectionContactProps) {
   return (
-    <MjSection once className="flex flex-col items-center justify-center bg-linear-to-b from-neutral-900 from-20% to-neutral-800">
-      <motion.h1 variants={FADE_FROM_RIGHT} transition={{ duration: 0.5 }} className="flex h-[5vh] w-[80%] items-center justify-center text-lg font-bold">
+    <MjSection once className="flex flex-col items-center justify-center">
+      <motion.h1 variants={FADE_FROM_RIGHT} transition={{ duration: 0.5, ease: 'easeOut' }} className="flex h-[5vh] w-[80%] items-center justify-center text-lg font-bold">
         {subtitle}
       </motion.h1>
-      <motion.p variants={FADE_FROM_LEFT} transition={{ duration: 0.5 }} className="w-[80%] text-center text-sm">
+      <motion.p variants={FADE_FROM_LEFT} transition={{ duration: 0.5, ease: 'easeOut' }} className="w-[80%] text-center text-sm">
         {description}
       </motion.p>
-      <motion.div variants={RISE_UP} transition={{ duration: 0.5 }} className="my-[3vh] flex w-[15vw] flex-row items-center justify-between">
+      <motion.div variants={RISE_UP} transition={{ duration: 0.5, ease: 'easeOut' }} className="my-[3vh] flex w-[15vw] flex-row items-center justify-between">
         {links.map((link) => (
           <a key={link.alt} href={link.href} target="_blank" rel="noreferrer">
             <img src={link.icon} alt={link.alt} className="h-[5vh] w-[5vh] cursor-pointer" />

@@ -9,6 +9,7 @@ import MjContactPage from './pages/MjContactPage';
 export default function MjApp() {
   return (
     <BrowserRouter>
+      <img src="/assets/blueprint.avif" alt="" className="pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover grayscale opacity-30" />
       <MjNav />
       <Routes>
         <Route path="/" element={<MjHomePage />} />

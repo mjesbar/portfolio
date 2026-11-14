@@ -32,11 +32,13 @@
   --text-xl: 36px;
   --text-xl--line-height: 1.5;
   --text-2xl: 72px;
-  --text-2xl--line-height: 1.5;
+  --text-2xl--line-height: 1;
   --text-3xl: 120px;
-  --text-3xl--line-height: 1.5;
+  --text-3xl--line-height: 1;
   --text-4xl: 168px;
-  --text-4xl--line-height: 1.5;
+  --text-4xl--line-height: 1;
+  --text-5xl: 240px;
+  --text-5xl--line-height: 1;
 
   /* Colours: primary, secondary (accents), neutral (base) */
   --color-primary-100: oklch(97.00% 0.0389 41.12);

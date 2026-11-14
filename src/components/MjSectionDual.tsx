@@ -35,7 +35,11 @@ function MjDualWord({ word }: { word: string }) {
   const slug = word.toLowerCase();
 
   if (!ELIGIBLE_WORDS.includes(slug)) {
-    return <span className="cursor-default text-2xl text-neutral-500">{word}</span>;
+    return (
+      <span className="cursor-default text-2xl text-neutral-500 opacity-25 transition-opacity duration-250 ease-out group-has-[[data-eligible]:hover]:opacity-75">
+        {word}
+      </span>
+    );
   }
 
   return (
@@ -45,7 +49,7 @@ function MjDualWord({ word }: { word: string }) {
       onMouseEnter={() => setHoverColor(HOVER_COLORS[Math.floor(Math.random() * HOVER_COLORS.length)])}
       onMouseLeave={() => setHoverColor(undefined)}
       style={{ color: hoverColor }}
-      className={`cursor-pointer font-bold transition-[color,font-size] duration-250 ${hoverColor ? 'text-4xl' : 'text-3xl'}`}
+      className={`cursor-pointer font-heading font-bold transition-[color,font-size] duration-250 ease-out ${hoverColor ? 'text-5xl' : 'text-4xl'}`}
     >
       {word}
     </Link>
@@ -59,21 +63,21 @@ export default function MjSectionDual({ imgSrc, imgPos, lines }: MjSectionDualPr
         src={imgSrc}
         alt=""
         variants={IMAGE_VARIANTS}
-        transition={{ duration: 1 }}
-        className={`pointer-events-none absolute top-0 z-[1] h-auto w-1/2 min-w-[680px] max-w-1/2 select-none ${imgPos === 'right' ? 'right-0' : 'left-0'}`}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className={`pointer-events-none absolute top-0 z-[1] h-auto w-[45%] min-w-[612px] max-w-[45%] select-none ${imgPos === 'right' ? 'right-0' : 'left-0'}`}
       />
-      <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden">
+      <div className="flex h-full w-full flex-col items-center justify-center">
         {lines.map((line, index) => (
           <motion.div
             key={line}
             custom={(index + 1) % 2 === 0 ? -200 : 200}
             variants={LINE_VARIANTS}
-            transition={{ duration: 1 }}
-            className="relative has-[[data-eligible]:hover]:z-[2]"
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="group relative whitespace-nowrap has-[[data-eligible]:hover]:z-[2]"
           >
             {line.split(' ').map((word, wordIndex) => (
               <Fragment key={word}>
-                {wordIndex > 0 && ' '}
+                {wordIndex > 0 && <span className="text-2xl"> </span>}
                 <MjDualWord word={word} />
               </Fragment>
             ))}

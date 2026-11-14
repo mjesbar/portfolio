@@ -61,10 +61,10 @@ export default function MjSectionWork({
       <div className="absolute inset-0 z-[1] bg-[linear-gradient(to_top,var(--color-neutral-900)_20%,transparent_50%,var(--color-neutral-900)_80%)]" />
       <motion.div
         variants={CONTAINER_VARIANTS}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className="relative top-[3vh] z-[2] box-content flex h-[85%] w-[85%] flex-row items-center justify-evenly rounded-lg border-(length:--border-heavy) border-neutral-700 backdrop-blur-[20px]"
       >
-        <motion.div variants={TEXT_VARIANTS} transition={{ duration: 1 }} className="box-content flex w-[30%] flex-col items-start justify-center gap-4 p-[2%] text-sm [&_a]:underline">
+        <motion.div variants={TEXT_VARIANTS} transition={{ duration: 0.5, ease: 'easeOut' }} className="box-content flex w-[30%] flex-col items-start justify-center gap-4 p-[2%] text-sm [&_a]:underline">
           <h1 className="text-xl font-bold">{subtitle}</h1>
           <p>{description1}</p>
           <p>{description2}</p>
@@ -77,17 +77,17 @@ export default function MjSectionWork({
           playsInline
           onEnded={handleMediaEnded}
           variants={MEDIA_VARIANTS}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           className="h-auto w-[60%] rounded-lg object-contain"
         />
-        <motion.img src={iconTopSrc} alt="" variants={ICON_TOP_VARIANTS} transition={{ duration: 1 }} className="absolute top-[5%] left-[90%] z-[4] h-auto w-[20%]" />
-        <motion.img src={iconBotSrc} alt="" variants={ICON_BOT_VARIANTS} transition={{ duration: 1 }} className="absolute top-1/2 left-[-18%] z-[4] h-auto w-[20%]" />
+        <motion.img src={iconTopSrc} alt="" variants={ICON_TOP_VARIANTS} transition={{ duration: 0.5, ease: 'easeOut' }} className="absolute top-[5%] left-[90%] z-[4] h-auto w-[20%]" />
+        <motion.img src={iconBotSrc} alt="" variants={ICON_BOT_VARIANTS} transition={{ duration: 0.5, ease: 'easeOut' }} className="absolute top-1/2 left-[-18%] z-[4] h-auto w-[20%]" />
         <motion.a
           href={linkUrl}
           target="_blank"
           rel="noreferrer"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, repeat: Infinity, ease: 'easeOut' }}
           className="absolute top-[85%] left-[40%] z-[4] flex h-[5%] w-[15%] flex-row items-center justify-around text-base underline"
         >
           <p>View Project</p>
